@@ -84,11 +84,7 @@ a {
 }
 
 /*Header part start*/
-.header-top-strip {
-  background-color: var(--color-131921);
-  border-bottom: 1px solid var(--color-3b4149);
 
-}
 
 .headnews {
   font-size: 14px;
@@ -96,31 +92,48 @@ a {
 }
 
 .header-uppper {
-  background-color: var(--color-131921);
+  background-color: #d3d3d3;
+  color: #fff;
+
+
+}
+
+.logo_heading .harry {
+  color: black;
 }
 
 .header-uppper .input-group-text {
-  background-color: var(--color-febd69);
+  background-color: var(--color-131921);
+  color: var(--color-ededed);
+  cursor: pointer;
 }
 
 .header-bottom {
-  background-color: var(--color-232f3e);
+  background-color: #d3d3d3;
   margin-bottom: 50px;
+}
+
+.menu-bottom {
+  gap: 10px;
 }
 
 .clik-icon {
   font-size: x-large;
-  color: gray;
+  color: var(--color-3b4149);
 }
 
 .tark {
-  font-size: 15px;
-  font-weight: 200;
+  font-size: 12px;
+  font-weight: 100;
 
 }
 
+.header-bottom .menu-links {
+  margin-left: 20px;
+}
+
 .header-bottom .menu-links a {
-  color: White;
+  color: var(--color-131921);
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -130,6 +143,10 @@ a {
 
 .header-bottom .dropdown button:focus {
   box-shadow: none;
+}
+
+.dropdown {
+  background: var(--color-131921);
 }
 
 .header-bottom .dropdown-menu {
@@ -153,7 +170,7 @@ a {
   font-size: x-large;
 }
 
-/*Header part start*/
+/*Header part end*/
 
 
 
@@ -161,16 +178,14 @@ a {
 
 /*footer start*/
 footer {
-  background-color: var(--color-131921);
+  background-color: #d3d3d3;
 }
 
-footer:not(:first-child) {
-  border-top: 1px solid var(--color-3b4149);
-}
+
 
 .newleticon {
   font-size: x-large;
-  color: var(--color-febd69);
+  color: var(--color-777777);
   margin-right: 10px;
 }
 
@@ -178,11 +193,82 @@ footer:not(:first-child) {
   font-size: 20px;
 }
 
+.newsletter {
+  margin-top: 40px;
+}
+
+.newsletInput {
+  width: 100%;
+  border: none;
+}
+
 footer .input-group-text {
   background-color: var(--color-131921);
-  color: white;
+  color: var(--color-ededed);
   padding: 8px 17px;
   font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 50%;
+
+}
+
+footer .input-group-text:hover {
+  background-color: var(--color-bf4800);
+  color: var(--color-ededed);
+
+}
+
+.footerIcons {
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  background: var(--color-ededed);
+  color: var(--color-131921);
+  text-align: center;
+
+  padding: 2px;
+
+}
+
+.footerIcons a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 28px;
+  text-align: center;
+}
+
+.footerIcons:hover {
+  background: var(--color-bf4800);
+  color: var(--color-ededed);
+}
+
+.footerIcons a:hover {
+  color: var(--color-ededed);
+}
+
+.footer-title {
+  margin-bottom: 3rem;
+}
+
+footer .footer-title h6 {
+  position: relative;
+  text-transform: uppercase;
+  position: relative;
+
+}
+
+footer .footer-title h6::after {
+  content: "";
+  position: absolute;
+  background: var(--color-131921);
+  height: 3px;
+  width: 40%;
+  left: 0;
+  bottom: -10px;
+  box-sizing: border-box;
+  cursor: pointer;
+
 }
 
 /*footer ends here*/
@@ -191,6 +277,32 @@ footer .input-group-text {
 
 
 /*homepage start here*/
+
+.hero-intro {
+  margin-top: 10rem;
+  text-align: start;
+}
+
+.hero-intro h6 {
+  margin-bottom: 25px;
+  color: var(--color-bf4800);
+}
+
+.hero-intro h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+
+}
+
+.hero-intro h1 span {
+  color: var(--color-bf4800);
+}
+
+.hero-intro p {
+  font-size: 16px;
+  color: var(--color-232f3e);
+}
+
 .main-banner-content {
   top: 15%;
   left: 5%;
@@ -222,41 +334,15 @@ footer .input-group-text {
   color: var(--color-f9f1f1);
 }
 
-
-.small-banner-content {
-  top: 25%;
-  left: 10%;
+.to-shop {
+  position: absolute;
+  left: 28rem;
+  bottom: 2rem;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
 }
 
-.small-banner-content h5 {
-  color: var(--color-bf4800);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 0 12px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
-.small-banner-content h6 {
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: -2px;
-  font-weight: 500;
-  text-transform: none;
-  color: var(--color-f9f1f1);
-}
-
-.small-banner-content p {
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.4;
-  color: var(--color-f9f1f1);
-}
-
-.small-banner {
-  width: 49%
-}
 
 /*home wrapper-2 start here*/
 
@@ -496,7 +582,7 @@ footer .input-group-text {
   background-color: white;
 }
 
-.special-product-card .badge {}
+
 
 /*SpecialProductCard ends here*/
 
@@ -598,7 +684,7 @@ footer .input-group-text {
 .colors li {
   width: 20px;
   height: 20px;
-  background-color: red;
+  background-color: green;
   border-radius: 50%;
 
 }

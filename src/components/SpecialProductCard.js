@@ -6,14 +6,14 @@ const SpecialProductCard = () => {
     return (
         <div className='col-6 mb-3'>
             <div className="special-product-card">
-                <div className="d-flex justify-content-between">
-                    <div>
+                <div className="d-flex justify-content-between gap-15">
+                    <div className="special-product-card-image">
                         <img src="images/cok1.jpg" alt="special-p" className='img-fluid' />
                     </div>
                     <div>
                         <div className="special-product-content">
                             <h5 className='brandName'>Kingston</h5>
-                            <h6 className="title">Home winter furnitures set 3</h6>
+                            <p className="title">Home winter furnitures set 3</p>
                             <ReactStars
                                 count={5}
                                 value={4}

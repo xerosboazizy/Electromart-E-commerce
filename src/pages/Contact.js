@@ -4,14 +4,14 @@ import Meta from '../components/Meta'
 import { IoIosHome, IoIosCall } from "react-icons/io"
 import { BsFillEnvelopeAtFill } from "react-icons/bs"
 import { FaInfo } from "react-icons/fa"
+import Container from '../components/Container'
 
 const Contact = () => {
     return (
         <>
             <Meta title={"Contact Us"} />
             <BreadCrumb title="Contact Us" />
-            <div className="contact-wrapper py-5 home-wrapper-2"></div>
-            <div className="container-lg">
+            <Container class1="contact-wrapper py-5 home-wrapper-2">
                 <div className="row">
                     <div className="col-12">
                         <iframe
@@ -85,7 +85,8 @@ const Contact = () => {
 
                     </div>
                 </div>
-            </div>
+
+            </Container>
         </>
     )
 }

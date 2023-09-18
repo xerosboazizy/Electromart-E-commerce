@@ -7,63 +7,58 @@ import ProductCard from '../components/ProductCard'
 import SpecialProductCard from '../components/SpecialProductCard'
 import Container from '../components/Container'
 import { Services } from '../utils/Data'
+import { FaArrowDown } from "react-icons/fa"
+import heroimg from "../image/heroimg.png"
 
 const Home = () => {
     return (
         <>
-            <Container className="home-wrapper-1 py-5">
+            <Container class1="home-wrapper-1 py-5">
                 <div className=" row">
                     <div className="col-6">
-                        <div className="main-banner  position-relative">
-                            <img src="images/fastfood1.jpg" alt="fastfood" className='img-fluid rounded-3' />
-                            <div className="main-banner-content position-absolute">
-                                <h5>Elegant for Pro</h5>
-                                <h6>Turing Washhands.</h6>
-                                <p>from $999.00 or $41.62/mo</p>
-                                <Link className='button'>Buy now</Link>
+                        <div className="d-flex flex-wrap ">
+                            <div className='hero-intro'>
+                                <h6>First Class Gadgets</h6>
+                                <h1>All Electronic products <br /> Up to <span> 50%</span> off </h1>
+                                <div>
+                                    <p>lremm ipsum  where ever he taake produb tnmekwko alwqays wiuning and asws sellin thgem globallay </p>
+                                </div>
+                                <Link className='button'>Shop Now</Link>
                             </div>
                         </div>
                     </div>
                     <div className="col-6">
-                        <div className="d-flex flex-wrap justify-content-between align-items-center gap-8">
-                            <div className="small-banner position-relative">
-                                <img src="images/piza1.jpg" alt="fastfood" className='img-fluid rounded-3' />
-                                <div className="small-banner-content position-absolute">
-                                    <h5>New Arrival</h5>
-                                    <h6>Turing Washhands.</h6>
-                                    <p>from $999.00 <br />or $41.62/mo</p>
+                        <div className="main-banner  position-relative">
+                            <img src={heroimg} alt="fastfood" className='img-fluid rounded-3' />
+                            <button className='to-shop button'>
+                                <FaArrowDown />
+                            </button>
 
-                                </div>
-                            </div>
-                            <div className="small-banner position-relative">
-                                <img src="images/piza1.jpg"
-                                    alt="fastfood"
-                                    className='img-fluid rounded-3' />
-                                <div className="small-banner-content position-absolute">
-                                    <h5>New Arrival</h5>
-                                    <h6>Turing Washhands.</h6>
-                                    <p>from $999.00<br /> or $41.62/mo</p>
+                        </div>
+                    </div>
 
-                                </div>
-                            </div>
-                            <div className="small-banner  position-relative">
-                                <img src="images/pizza2.jpg" alt="fastfood" className='img-fluid rounded-3' />
-                                <div className="small-banner-content position-absolute">
-                                    <h5>New Arrival</h5>
-                                    <h6>Turing Washhands.</h6>
-                                    <p>from $999.00<br /> or $41.62/mo</p>
+                </div>
 
-                                </div>
-                            </div>
-                            <div className="small-banner  position-relative">
-                                <img src="images/piza1.jpg" alt="fastfood" className='img-fluid rounded-3' />
-                                <div className="small-banner-content position-absolute">
-                                    <h5>New Arrival</h5>
-                                    <h6>Turing Washhands.</h6>
-                                    <p>from $999.00<br /> or $41.62/mo</p>
+            </Container>
 
-                                </div>
-                            </div>
+            <Container class1="home-wrapper-2 py-5">
+
+                <div className="row">
+                    <div className="col-12">
+                        <div className="services d-flex align-items-center justify-content-between">
+                            {Services?.map((i, j) => {
+                                return (
+                                    <div className='d-flex align-items-center gap-15' key={j}>
+                                        <span className='tokes'>{i.icon}</span>
+                                        <div>
+                                            <h6 className='h-title'>{i.tagline}</h6>
+                                            <p className='p-desc mb-0'>{i.title}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+
+
                         </div>
                     </div>
                 </div>
@@ -71,247 +66,147 @@ const Home = () => {
             </Container>
 
 
-            <section className='home-wrapper-2 py-5'>
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="services d-flex align-items-center justify-content-between">
-                                {Services?.map((i, j) => {
-                                    return (
-                                        <div className='d-flex align-items-center gap-15' key={j}>
-                                            <i icon={i.icon} className='tokes' />
-                                            <div>
-                                                <h6 className='h-title'>{i.tagline}</h6>
-                                                <p className='p-desc mb-0'>{i.title}</p>
-                                            </div>
-                                        </div>
-                                    )
-                                })}
+
+            <Container class1="featured-wrapper py-5 home-wrapper-2">
+                <div className="row">
+                    <div className="col-12">
+                        <h3 className="section-heading">
+                            Featured Collections
+                        </h3>
+                    </div>
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
 
 
+
+                </div>
+            </Container>
+
+
+            <Container class1="famous-wrapper py-5 home-wrapper-2">
+                <div className="row">
+                    <div className="col-3">
+                        <div className="famous-card position-relative">
+                            <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
+                            <div className="famous-content position-absolute">
+                                <h5>Big Size</h5>
+                                <h6>Smart Bed Series</h6>
+                                <p>from $1000 or $100/mo for 10 mo </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className="home-wrapper-3 py-5">
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="categories d-flex flex-wrap justify-content-between align-items-center ">
-                                <div className=' d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className='d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles $ game</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className=' d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className='d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className=' d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className='d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles $ game</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className=' d-flex align-items-center'>
-                                    <div>
-                                        <h6>Tiles</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
-                                <div className='d-flex  align-items-center'>
-                                    <div>
-                                        <h6>Tiles</h6>
-                                        <p className='product-desc'>10 Items</p>
-                                    </div>
-                                    <img src="images/pizza4.jpg" alt="Tiles" className="mango" />
-                                </div>
+                    <div className="col-3">
+                        <div className="famous-card position-relative">
+                            <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
+                            <div className="famous-content position-absolute">
+                                <h5>Big Size</h5>
+                                <h6>Smart Bed Series</h6>
+                                <p>from $1000 or $100/mo for 10 mo </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-
-            <section className='featured-wrapper py-5 home-wrapper-2'>
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <h3 className="section-heading">
-                                Featured Collections
-                            </h3>
-                        </div>
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-
-
-
-                    </div>
-                </div>
-            </section>
-
-            <section className="famous-wrapper py-5 home-wrapper-2">
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-3">
-                            <div className="famous-card position-relative">
-                                <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
-                                <div className="famous-content position-absolute">
-                                    <h5>Big Size</h5>
-                                    <h6>Smart Bed Series</h6>
-                                    <p>from $1000 or $100/mo for 10 mo </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="famous-card position-relative">
-                                <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
-                                <div className="famous-content position-absolute">
-                                    <h5>Big Size</h5>
-                                    <h6>Smart Bed Series</h6>
-                                    <p>from $1000 or $100/mo for 10 mo </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="famous-card position-relative">
-                                <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
-                                <div className="famous-content position-absolute">
-                                    <h5>Big Size</h5>
-                                    <h6>Smart Bed Series</h6>
-                                    <p>from $1000 or $100/mo for 10 mo </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="famous-card position-relative">
-                                <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
-                                <div className="famous-content position-absolute">
-                                    <h5>Big Size</h5>
-                                    <h6>Smart Bed Series</h6>
-                                    <p>from $1000 or $100/mo for 10 mo </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section className="special-products py5 home-wrapper-2">
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="section-heading">Special Products</div>
-                        </div>
-                        <div className="row">
-                            <SpecialProductCard />
-                            <SpecialProductCard />
-                            <SpecialProductCard />
-                            <SpecialProductCard />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='popular-wrapper py-5 home-wrapper-2'>
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <h3 className="section-heading">
-                                Our Popular Products
-                            </h3>
-                        </div>
-                    </div>
-                    <div className="row">
-
-
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                    </div>
-                </div>
-            </section>
-
-            <section className="marquee-wrapper home-wrapper-4 py-5">
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="marquee-inner-wrapper card-wrapper">
-                                <Marquee className="d-flex">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </Marquee>
+                    <div className="col-3">
+                        <div className="famous-card position-relative">
+                            <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
+                            <div className="famous-content position-absolute">
+                                <h5>Big Size</h5>
+                                <h6>Smart Bed Series</h6>
+                                <p>from $1000 or $100/mo for 10 mo </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className='blog-wrapper py-5 home-wrapper-2'>
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-12">
-                            <h3 className="section-heading">
-                                Our Latest Products
-                            </h3>
-                        </div>
-
-
-                    </div>
-                    <div className="row">
-                        <div className="col-3">
-                            <BlogCard />
-                        </div>
-                        <div className="col-3">
-                            <BlogCard />
-                        </div>
-                        <div className="col-3">
-                            <BlogCard />
-                        </div>
-                        <div className="col-3">
-                            <BlogCard />
+                    <div className="col-3">
+                        <div className="famous-card position-relative">
+                            <img src="images/foodWall3.jpg" alt="" className='img-fluid' />
+                            <div className="famous-content position-absolute">
+                                <h5>Big Size</h5>
+                                <h6>Smart Bed Series</h6>
+                                <p>from $1000 or $100/mo for 10 mo </p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </section>
+            </Container>
+
+
+            <Container class1="special-products py5 home-wrapper-2">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="section-heading">Special Products</div>
+                    </div>
+                    <div className="row">
+                        <SpecialProductCard />
+                        <SpecialProductCard />
+                        <SpecialProductCard />
+                        <SpecialProductCard />
+                    </div>
+                </div>
+            </Container>
+
+            <Container class1="popular-wrapper py-5 home-wrapper-2">
+                <div className="row">
+                    <div className="col-12">
+                        <h3 className="section-heading">
+                            Our Popular Products
+                        </h3>
+                    </div>
+                </div>
+                <div className="row">
+
+
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                </div>
+            </Container>
+
+            <Container class1="marquee-wrapper home-wrapper-4 py-5">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="marquee-inner-wrapper card-wrapper">
+                            <Marquee className="d-flex">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </Marquee>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+
+            <Container class1="blog-wrapper py-5 home-wrapper-2">
+                <div className="row">
+                    <div className="col-12">
+                        <h3 className="section-heading">
+                            Our Latest Products
+                        </h3>
+                    </div>
+
+
+                </div>
+                <div className="row">
+                    <div className="col-3">
+                        <BlogCard />
+                    </div>
+                    <div className="col-3">
+                        <BlogCard />
+                    </div>
+                    <div className="col-3">
+                        <BlogCard />
+                    </div>
+                    <div className="col-3">
+                        <BlogCard />
+                    </div>
+                </div>
+            </Container>
         </>
 
     )

@@ -9,29 +9,29 @@ export const Services = [
     {
         "tagline": "Free Shipping ",
         "title": "from all orders below $100",
-        "icon": { TbTruckDelivery },
+        "icon": <TbTruckDelivery />,
     },
 
     {
         "tagline": "Daily Supprise Offers ",
         "title": "Save upto 25% off",
-        "icon": { GoPackage },
+        "icon": <GoPackage />,
     },
 
     {
         "tagline": "Support 24/7 ",
         "title": "Shop with an expert",
-        "icon": { RiCustomerServiceFill },
+        "icon": <RiCustomerServiceFill />,
     },
     {
         "tagline": "Affordable Prices ",
         "title": "Get factory direct price",
-        "icon": { FiSettings },
+        "icon": <FiSettings />,
     },
     {
         "tagline": "Secure payment ",
         "title": "100% protected payment",
-        "icon": { MdPayment },
+        "icon": <MdPayment />
     },
 
 ];
